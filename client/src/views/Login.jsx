@@ -52,7 +52,7 @@ class Login extends Component {
   render(){
     return (
       <>
-        <Col xs="7" md="7" lg="7">
+        <Col xs="10" md="9" lg="8" xl="7">
           <Card className="bg-secondary shadow border-0">
             <CardHeader className="bg-transparent pb-5">
               <div className="text-muted text-center mt-2 mb-3">

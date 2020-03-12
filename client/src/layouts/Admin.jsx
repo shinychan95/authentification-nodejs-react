@@ -6,6 +6,10 @@ import { Container } from "reactstrap";
 
 import routes from "../routes.js";
 
+// core components
+import NavBar from "../components/NavBar.jsx";
+import Footer from "../components/Footer.jsx";
+
 class Admin extends React.Component {
   componentDidUpdate(e) {
     document.documentElement.scrollTop = 0;
@@ -44,7 +48,14 @@ class Admin extends React.Component {
     return (
       <>
         <div className="main-content" ref="mainContent">
+          <NavBar
+            {...this.props}
+            brandText={this.getBrandText(this.props.location.pathname)}
+          />
           <Switch>{this.getRoutes(routes)}</Switch>
+          <Container fluid>
+            <Footer />
+          </Container>
         </div>
       </>
     );

@@ -1,16 +1,9 @@
-import Profile from "./views/Profile.jsx";
 import Register from "./views/Register.jsx";
 import Login from "./views/Login.jsx";
+import ResetPassword from "./views/ResetPassword.jsx";
 
 
 var routes = [
-  {
-    path: "/user-profile",
-    name: "User Profile",
-    icon: "ni ni-single-02 text-yellow",
-    component: Profile,
-    layout: "/admin"
-  },
   {
     path: "/login",
     name: "Login",
@@ -23,6 +16,13 @@ var routes = [
     name: "Register",
     icon: "ni ni-circle-08 text-pink",
     component: Register,
+    layout: "/auth"
+  },
+  {
+    path: "/reset-password",
+    name: "ResetPassword",
+    icon: "ni ni-lock-circle-open text-pink",
+    component: ResetPassword,
     layout: "/auth"
   }
 ];

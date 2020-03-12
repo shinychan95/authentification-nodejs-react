@@ -181,7 +181,7 @@ class Register extends React.Component {
     const {errors, emailDuplicated, emailClick, email} = this.state;
     return (
       <>
-        <Col xs="7" md="7" lg="7">
+        <Col xs="10" md="9" lg="8" xl="7">
           <Card className="bg-secondary shadow border-0">
             <CardHeader className="bg-transparent pb-5">
               <div className="text-muted text-center mt-2 mb-4">
@@ -268,10 +268,8 @@ class Register extends React.Component {
                       </InputGroup>
                     </FormGroup>
                   </Col>
-                  
                   <Col xs="auto">
-                      
-                      <Button className="mr-1" color="light" type="button" onClick={this.verifyEmail}>
+                      <Button className="mr-1 mt-1 ml--3" color="light" size="sm" type="button" onClick={this.verifyEmail}>
                             Duplicated
                       </Button>
                       {emailClick && email.length > 0 && errors.email.length == 0 && 
@@ -335,7 +333,9 @@ class Register extends React.Component {
                   <Button href='/auth/login' className="mt-4" color="primary" type="button" onClick={this.handleSubmit}>
                     Create account
                   </Button>
-                  
+                  <Button href='/auth/login' className="mt-4 ml-2" color="light" type="button">
+                    Cancel
+                  </Button>
                 </div>
               </Form>
             </CardBody>
